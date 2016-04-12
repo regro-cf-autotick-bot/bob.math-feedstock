@@ -23,6 +23,7 @@ requirements:
   - bob.core
   - boost
   - cmake
+  - numpy x.x
   - nomkl
   - pkg-config
   - gcc     # [linux]
@@ -31,6 +32,7 @@ requirements:
   - python
   - bob.core
   - boost
+  - numpy x.x
   - nomkl
   - libgcc  # [linux]
 
