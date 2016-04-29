@@ -5,7 +5,7 @@ Home: http://github.com/bioidiap/bob.math
 
 Package license: Modified BSD License (3-clause)
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: LAPACK and BLAS interfaces for Bob
 
