@@ -10,9 +10,8 @@ source:
   md5: 0f010af6ce20fe6614570edff94e593f
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
-  script: python -B setup.py install --single-version-externally-managed --record record.txt
   features:
     - nomkl
 
