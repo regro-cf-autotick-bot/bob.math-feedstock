@@ -10,7 +10,7 @@ source:
   md5: 0f010af6ce20fe6614570edff94e593f
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
   features:
     - nomkl
@@ -20,7 +20,7 @@ requirements:
   - python
   - setuptools
   - bob.core
-  - boost 1.60*
+  - boost 1.60.*
   - cmake
   - numpy x.x
   - nomkl
@@ -29,7 +29,7 @@ requirements:
   run:
   - python
   - bob.core
-  - boost 1.60*
+  - boost 1.60.*
   - numpy x.x
   - nomkl
 
