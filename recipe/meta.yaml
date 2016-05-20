@@ -20,7 +20,7 @@ requirements:
   - python
   - setuptools
   - bob.core
-  - boost
+  - boost 1.60*
   - cmake
   - numpy x.x
   - nomkl
@@ -29,7 +29,7 @@ requirements:
   run:
   - python
   - bob.core
-  - boost
+  - boost 1.60*
   - numpy x.x
   - nomkl
 
