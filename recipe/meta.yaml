@@ -1,4 +1,5 @@
 {% set version = "2.0.3" %}
+{% set variant = "openblas" %}
 
 package:
   name: bob.math
@@ -10,28 +11,30 @@ source:
   md5: 0f010af6ce20fe6614570edff94e593f
 
 build:
-  number: 3
+  number: 200
   skip: true  # [win]
   features:
-    - nomkl
+    - blas_{{ variant }}
 
 requirements:
   build:
   - python
   - setuptools
   - bob.core
-  - boost
+  - boost 1.60.*
   - cmake
   - numpy x.x
-  - nomkl
+  - blas 1.1 {{ variant }}
+  - openblas 0.2.18*
   - pkg-config
 
   run:
   - python
   - bob.core
-  - boost
+  - boost 1.60.*
   - numpy x.x
-  - nomkl
+  - blas 1.1 {{ variant }}
+  - openblas 0.2.18*
 
 test:
   requires:
