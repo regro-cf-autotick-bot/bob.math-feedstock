@@ -11,7 +11,7 @@ source:
   md5: 0f010af6ce20fe6614570edff94e593f
 
 build:
-  number: 200
+  number: 201
   skip: true  # [win]
   features:
     - blas_{{ variant }}
@@ -21,7 +21,7 @@ requirements:
   - python
   - setuptools
   - bob.core
-  - boost 1.60.*
+  - boost 1.61.*
   - cmake
   - numpy x.x
   - blas 1.1 {{ variant }}
@@ -31,7 +31,7 @@ requirements:
   run:
   - python
   - bob.core
-  - boost 1.60.*
+  - boost 1.61.*
   - numpy x.x
   - blas 1.1 {{ variant }}
   - openblas 0.2.18*
