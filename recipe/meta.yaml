@@ -7,7 +7,7 @@ package:
 
 source:
   fn: bob.math-{{ version }}.zip
-  url: https://pypi.python.org/packages/source/b/bob.math/bob.math-{{ version }}.zip
+  url: https://pypi.io/packages/source/b/bob.math/bob.math-{{ version }}.zip
   md5: b4dedfa0677ce5f782103e7114673311
 
 build:
