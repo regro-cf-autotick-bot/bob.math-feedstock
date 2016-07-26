@@ -11,7 +11,7 @@ source:
   md5: b4dedfa0677ce5f782103e7114673311
 
 build:
-  number: 200
+  number: 201
   skip: true  # [win]
   features:
     - blas_{{ variant }}
@@ -45,6 +45,11 @@ test:
   - bob.math
 
   commands:
+  # Use only 1 thread with OpenBLAS to avoid timeouts on CIs.
+  # This should have no other affect on the build. A user
+  # should still be able to set this (or not) to a different
+  # value at run-time to get the expected amount of parallelism.
+  - export OPENBLAS_NUM_THREADS=1
   - nosetests -sv bob.math
 
 about:
