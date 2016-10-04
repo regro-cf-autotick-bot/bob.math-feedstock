@@ -11,7 +11,7 @@ source:
   md5: a4465f8eebabc7e74449f486670c8e91
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   features:
     - blas_{{ variant }}
@@ -25,7 +25,7 @@ requirements:
   - cmake
   - numpy x.x
   - blas 1.1 {{ variant }}
-  - openblas 0.2.18*
+  - openblas 0.2.18|0.2.18.*
   - pkg-config
 
   run:
@@ -34,7 +34,7 @@ requirements:
   - boost 1.61.*
   - numpy x.x
   - blas 1.1 {{ variant }}
-  - openblas 0.2.18*
+  - openblas 0.2.18|0.2.18.*
 
 test:
   requires:
