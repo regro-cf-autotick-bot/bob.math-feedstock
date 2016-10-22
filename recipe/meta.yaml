@@ -1,4 +1,4 @@
-{% set version = "2.0.5" %}
+{% set version = "2.0.6" %}
 {% set variant = "openblas" %}
 
 package:
@@ -8,10 +8,10 @@ package:
 source:
   fn: bob.math-{{ version }}.zip
   url: https://pypi.io/packages/source/b/bob.math/bob.math-{{ version }}.zip
-  md5: a4465f8eebabc7e74449f486670c8e91
+  md5: 02f27258a95220858bd16755359e4d15
 
 build:
-  number: 1
+  number: 200
   skip: true  # [win]
   features:
     - blas_{{ variant }}
