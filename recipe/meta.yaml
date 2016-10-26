@@ -18,39 +18,40 @@ build:
 
 requirements:
   build:
-  - python
-  - setuptools
-  - bob.core
-  - boost 1.61.*
-  - cmake
-  - numpy x.x
-  - blas 1.1 {{ variant }}
-  - openblas 0.2.18|0.2.18.*
-  - pkg-config
+    - python
+    - toolchain
+    - setuptools
+    - bob.core
+    - boost 1.61.*
+    - cmake
+    - numpy x.x
+    - blas 1.1 {{ variant }}
+    - openblas 0.2.18|0.2.18.*
+    - pkg-config
 
   run:
-  - python
-  - bob.core
-  - boost 1.61.*
-  - numpy x.x
-  - blas 1.1 {{ variant }}
-  - openblas 0.2.18|0.2.18.*
+    - python
+    - bob.core
+    - boost 1.61.*
+    - numpy x.x
+    - blas 1.1 {{ variant }}
+    - openblas 0.2.18|0.2.18.*
 
 test:
   requires:
-  - nose
+    - nose
 
   imports:
-  - bob
-  - bob.math
+    - bob
+    - bob.math
 
   commands:
   # Use only 1 thread with OpenBLAS to avoid timeouts on CIs.
   # This should have no other affect on the build. A user
   # should still be able to set this (or not) to a different
   # value at run-time to get the expected amount of parallelism.
-  - export OPENBLAS_NUM_THREADS=1
-  - nosetests -sv bob.math
+    - export OPENBLAS_NUM_THREADS=1
+    - nosetests -sv bob.math
 
 about:
   home: https://www.idiap.ch/software/bob/
@@ -59,4 +60,4 @@ about:
 
 extra:
   recipe-maintainers:
-  - 183amir
+    - 183amir
