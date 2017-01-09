@@ -4,6 +4,9 @@ if [[ `uname` == 'Darwin' ]]; then
     export MACOSX_DEPLOYMENT_TARGET=10.9
 fi
 
+export CFLAGS="${CFLAGS} -pthread"
+export LDFLAGS="${LDFLAGS} -lpthread"
+
 # Use only 1 thread with OpenBLAS to avoid timeouts on CIs.
 # This should have no other affect on the build. A user
 # should still be able to set this (or not) to a different
